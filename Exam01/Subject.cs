@@ -32,7 +32,7 @@ namespace Exam01
                 continue;   
             }
             Console.WriteLine("Please enter the time of exam (30 min to 180 min)");
-            while(!int.TryParse(Console.ReadLine(), out time) || (time <= 30 || time > 180))
+            while(!int.TryParse(Console.ReadLine(), out time) || (time < 30 || time > 180))
             {
                 Console.WriteLine("invallid time");
                 continue;
@@ -102,7 +102,7 @@ namespace Exam01
 
                     }
                     Console.WriteLine("please enter the right answer id");
-                    while (!(int.TryParse(Console.ReadLine(), out rightId) || (rightId < 1 || rightId > 4)))
+                    while (!(int.TryParse(Console.ReadLine(), out rightId) && (rightId < 1 && rightId > 4)))
                     {
                         Console.WriteLine("invalid id");
                         continue;
